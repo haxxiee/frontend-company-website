@@ -9,14 +9,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="max-w-6xl mx-auto">
+      <section className="max-w-[76rem] mx-auto">
         <div className="flex flex-col justify-center max-w-4xl py-64 mx-auto">
           <h1 className="font-bold text-7xl">Build. Launch. Grow.</h1>
-          <p className=" text-2xl py-2 text-gray-500">
-            Utility crafts award-winning mobile experiences driven by strategy,
-            design and technology.
+          <p className=" text-2xl font-medium py-2 text-gray-500 w-[620px]">
+            Utility crafts award-winning mobile and web experiences driven by
+            strategy, design and technology.
           </p>
-          <div className="font-semibold text-2xl pt-10">See Our Work</div>
+          <div className="font-semibold text-2xl mt-10 flex items-center">
+            See Our Work
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="mx-1 text-gray-400"
+            >
+              <path
+                d="M11.0001 3.67157L13.0001 3.67157L13.0001 16.4999L16.2426 13.2574L17.6568 14.6716L12 20.3284L6.34314 14.6716L7.75735 13.2574L11.0001 16.5001L11.0001 3.67157Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
         </div>
       </section>
     </>
