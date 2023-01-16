@@ -1,6 +1,7 @@
+import axios from "axios";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({ posts }: any) {
   return (
     <>
       <Head>
@@ -36,4 +37,17 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await axios.get("http://0.0.0.0:1337/api/tests");
+  // console.log(response);
+  const data = response.data.data;
+  // console.log(data.data);
+
+  return {
+    props: {
+      posts: data,
+    },
+  };
 }
