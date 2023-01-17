@@ -15,7 +15,7 @@ const Footer: FC = () => {
         </div>
         <div>
           <h2 className="font-bold text-3xl">Follow us</h2>
-          <div>Linkedin Insta</div>
+          <div className="font-medium text-lg">Linkedin Instagram</div>
         </div>
       </div>
     </div>

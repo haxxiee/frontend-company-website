@@ -1,7 +1,9 @@
 import axios from "axios";
 import Head from "next/head";
+import FrontpageCard from "../components/frontpageCard";
 
-export default function Home({ posts }: any) {
+export default function Home({ data }: any) {
+  // console.log(data);
   return (
     <>
       <Head>
@@ -35,19 +37,25 @@ export default function Home({ posts }: any) {
           </div>
         </div>
       </section>
+      {data.map((item: any) => {
+        return <FrontpageCard key={item.id} item={item} />;
+      })}
     </>
   );
 }
 
-export async function getStaticProps() {
-  const response = await axios.get("http://0.0.0.0:1337/api/tests");
-  // console.log(response);
-  const data = response.data.data;
-  // console.log(data.data);
+export async function getStaticProps(context: any) {
+  const response = await axios.get(
+    `http://0.0.0.0:1337/api/case-studies?populate=*`
+  );
 
+  const rawData = response.data.data;
+  const data = rawData.map((obj: any) => {
+    return obj.attributes;
+  });
   return {
     props: {
-      posts: data,
+      data,
     },
   };
 }

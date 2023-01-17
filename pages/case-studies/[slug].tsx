@@ -6,6 +6,7 @@ interface Props {
 }
 
 export default function Page({ post }: any) {
+  console.log(post);
   return (
     <div>
       <h1>{post.companyName}</h1>
@@ -26,6 +27,8 @@ export async function getStaticPaths() {
     };
   });
 
+  // console.log(paths);
+
   return {
     paths,
     fallback: false,
@@ -35,15 +38,14 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
   const slug = context.params.slug;
   const response = await axios.get(
-    `http://0.0.0.0:1337/api/case-studies?filters[slug][$eq]=${slug}`
+    `http://0.0.0.0:1337/api/case-studies?filters[slug][$eq]=${slug}&populate=*`
   );
 
-  const { companyName, companyDescription } = response.data.data[0].attributes;
+  const data = response.data.data[0].attributes;
   return {
     props: {
       post: {
-        companyName,
-        companyDescription,
+        data,
       },
     },
   };
