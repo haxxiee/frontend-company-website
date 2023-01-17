@@ -6,10 +6,10 @@ const Header: FC = () => {
       <div className="font-bold text-4xl">WebApp.</div>
       <div>
         <ul className="flex items-center gap-6 text-xl font-medium text-gray-600">
-          <li>Approach</li>
           <li>Case Studies</li>
+          <li>About</li>
           <li>Career</li>
-          <button className="bg-black px-8 py-4 rounded-md text-base text-white">
+          <button className="bg-black px-8 py-4 rounded-md text-base font-semibold text-white">
             Let&apos;s Talk
           </button>
         </ul>
