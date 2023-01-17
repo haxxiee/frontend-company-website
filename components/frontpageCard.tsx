@@ -6,7 +6,7 @@ const FrontpageCard: FC<any> = ({ item }) => {
   return (
     <div className="px-5">
       <div
-        className={`max-w-[85rem] mx-auto bg-slate-600 mb-10 h-[600px] rounded-lg text-white`}
+        className={`group max-w-[85rem] mx-auto bg-slate-600 mb-10 h-[600px] rounded-lg text-white hover:opacity-95 transition shadow-md`}
         style={{ backgroundColor: `${item.colorHex}` }}
       >
         <Link
