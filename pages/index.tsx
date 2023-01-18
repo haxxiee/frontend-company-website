@@ -42,7 +42,7 @@ export default function Home({ data }: any) {
         </div>
       </section>
       {data.map((item: any) => {
-        return <FrontpageCard key={item.id} item={item} />;
+        return <FrontpageCard key={item.slug} item={item} />;
       })}
     </>
   );
