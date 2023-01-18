@@ -3,7 +3,7 @@ import { FC } from "react";
 
 const Header: FC = () => {
   return (
-    <div className="flex justify-between items-center max-w-[76rem] mx-auto p-5">
+    <div className="flex justify-between items-center max-w-[76rem] mx-auto p-5 bg-opacity-0">
       <Link href={"/"}>
         <div className="font-bold text-4xl">WebApp.</div>
       </Link>

@@ -16,7 +16,7 @@ export default function Home({ data }: any) {
         <div className="flex flex-col justify-center max-w-4xl py-64 mx-auto">
           <h1 className="font-bold text-7xl">Build. Launch. Grow.</h1>
           <p className=" text-2xl font-medium py-2 text-gray-500 w-[620px]">
-            Utility crafts award-winning mobile and web experiences driven by
+            WebApp crafts award-winning mobile and web experiences driven by
             strategy, design and technology.
           </p>
           <div className="font-semibold text-2xl mt-10 flex items-center">
