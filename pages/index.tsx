@@ -1,9 +1,9 @@
 import axios from "axios";
 import Head from "next/head";
+import Link from "next/link";
 import FrontpageCard from "../components/frontpageCard";
 
 export default function Home({ data }: any) {
-  // console.log(data);
   return (
     <>
       <Head>
@@ -20,20 +20,24 @@ export default function Home({ data }: any) {
             strategy, design and technology.
           </p>
           <div className="font-semibold text-2xl mt-10 flex items-center">
-            See Our Work
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mx-1 text-gray-400"
-            >
-              <path
-                d="M11.0001 3.67157L13.0001 3.67157L13.0001 16.4999L16.2426 13.2574L17.6568 14.6716L12 20.3284L6.34314 14.6716L7.75735 13.2574L11.0001 16.5001L11.0001 3.67157Z"
-                fill="currentColor"
-              />
-            </svg>
+            <Link href={"/case-studies"}>
+              <div className="flex items-center group">
+                <h3>See Our Work</h3>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="mx-1 text-gray-400 group-hover:text-black transition-all"
+                >
+                  <path
+                    d="M11.0001 3.67157L13.0001 3.67157L13.0001 16.4999L16.2426 13.2574L17.6568 14.6716L12 20.3284L6.34314 14.6716L7.75735 13.2574L11.0001 16.5001L11.0001 3.67157Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
