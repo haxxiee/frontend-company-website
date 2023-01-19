@@ -9,7 +9,6 @@ interface Props {
 
 const Layout: FC<Props> = ({ children }) => {
   const location = useRouter();
-  console.log(location);
   return (
     <div>
       {location.pathname !== "/news/[slug]" ? <Header /> : ""}
