@@ -2,28 +2,23 @@ import axios from "axios";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Page({ data, content }: any) {
-  console.log(data);
   return (
-    <div className="flex flex-col justify-center items-center max-w-3xl mx-auto">
-      {/* <div className="">
-        <Image
-          src={data.image.data.attributes.url}
-          alt="Image of news picture"
-          width={500}
-          height={500}
-          className="w-full h-[600px] object-cover opacity-70 bg-slate-800"
-          priority
-        />
-      </div> */}
-      <h1 className="font-bold text-3xl mt-20 mb-10">{data.title}</h1>
-      <p className="text-blue-500 my-2">{data.date}</p>
+    <div className="">
+      <div className="flex justify-center items-center w-full h-[70px] bg-blue-300 ">
+        <h1 className="font-bold text-3xl text-white">WebApp Blog</h1>
+      </div>
+      <div className="flex flex-col justify-center items-center max-w-4xl px-5 mx-auto">
+        <h1 className="font-bold text-3xl mt-20 mb-10">{data.title}</h1>
+        <p className="text-blue-500 my-2">{data.date}</p>
 
-      <p className="text-lg font-semibold">{data.summary}</p>
-      <div className="my-10 w-full h-[1px] bg-blue-200" />
-      <div className="prose text-lg max-w-3xl ">
-        <MDXRemote {...content} />
+        <p className="text-lg font-semibold">{data.summary}</p>
+        <div className="my-10 w-full h-[1px] bg-blue-200" />
+        <div className="prose text-lg max-w-4xl ">
+          <MDXRemote {...content} />
+        </div>
       </div>
     </div>
   );
