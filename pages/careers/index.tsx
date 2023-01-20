@@ -1,6 +1,9 @@
+import axios from "axios";
 import Image from "next/image";
+import CareerCard from "../../components/careerCard";
 
-export default function Page({ post }: any) {
+export default function Page({ data }: any) {
+  console.log(data);
   return (
     <div className="flex flex-col items-center mx-auto">
       <div className="max-w-3xl my-32">
@@ -62,17 +65,36 @@ export default function Page({ post }: any) {
           </div>
         </div>
       </div>
-      <section className="max-w-5xl my-48 px-4">
-        <h2 className="font-semibold text-4xl mb-4">
+      <section className="max-w-5xl my-48">
+        <h2 className="font-semibold text-4xl mb-4 px-4">
           Now it&apos;s your turn.
         </h2>
-        <p className="text-2xl">
+        <p className="text-2xl px-4">
           We love making new friends. See a position you can fill? Tell us about
           yourself, we’ll take it from there if we have an opening.
         </p>
 
-        <h4 className="text-2xl font-bold my-32">Openings</h4>
+        <h4 className="text-2xl font-bold mt-32 mb-10 px-4">Openings</h4>
+        <div>
+          {data.map((item: any) => {
+            return <CareerCard key={item.slug} item={item} />;
+          })}
+        </div>
       </section>
     </div>
   );
+}
+
+export async function getStaticProps(context: any) {
+  const response = await axios.get(`http://0.0.0.0:1337/api/jobs`);
+
+  const rawData = response.data.data;
+  const data = rawData.map((obj: any) => {
+    return obj.attributes;
+  });
+  return {
+    props: {
+      data,
+    },
+  };
 }
