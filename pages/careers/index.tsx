@@ -3,7 +3,6 @@ import Image from "next/image";
 import CareerCard from "../../components/careerCard";
 
 export default function Page({ data }: any) {
-  console.log(data);
   return (
     <div className="flex flex-col items-center mx-auto">
       <div className="max-w-3xl my-32">
@@ -27,6 +26,7 @@ export default function Page({ data }: any) {
             alt={"Office picture"}
             width={1300}
             height={500}
+            priority
             className={"w-full rounded-sm"}
           />
           <div className="bg-gray-50 w-1/2 h-[600px] absolute bottom-0 right-0 rounded-br-sm rounded-tl-lg bg-opacity-95">

@@ -1,8 +1,6 @@
 import axios from "axios";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import Image from "next/image";
-import { useRouter } from "next/router";
 
 export default function Page({ data, content }: any) {
   return (
