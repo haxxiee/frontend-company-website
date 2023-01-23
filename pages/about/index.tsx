@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "../../components/ContactForm";
 
 export default function Page({ post }: any) {
   return (
@@ -132,6 +133,8 @@ export default function Page({ post }: any) {
           </p>
         </div>
       </div>
+
+      <ContactForm />
     </>
   );
 }

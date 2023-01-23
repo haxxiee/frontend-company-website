@@ -1,6 +1,7 @@
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import ContactForm from "../components/ContactForm";
 import FrontpageCard from "../components/frontpageCard";
 
 export default function Home({ data }: any) {
@@ -44,6 +45,16 @@ export default function Home({ data }: any) {
       {data.map((item: any) => {
         return <FrontpageCard key={item.slug} item={item} />;
       })}
+
+      <div className="flex flex-col justify-center items-center max-w-lg text-center mt-40 mb-10 mx-auto">
+        <h3 className="font-bold text-4xl mb-3">Let&apos;s Talk</h3>
+        <p className="text-xl text-gray-600">
+          We&apos;ve worked with clients of all sizes, from enterprise brands to
+          funded startups. Let&apos;s talk about your project and how we can
+          help provide value.
+        </p>
+      </div>
+      <ContactForm />
     </>
   );
 }
