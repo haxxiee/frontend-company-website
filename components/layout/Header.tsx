@@ -11,7 +11,7 @@ const Header: FC = () => {
 
   const changeNav = () => {
     const yPosition = window.scrollY;
-    if (yPosition >= 120) return setNav(true);
+    if (yPosition > 120) return setNav(true);
     return setNav(false);
   };
 
@@ -87,8 +87,8 @@ const Header: FC = () => {
         <div
           className={`${
             showNav
-              ? "fixed left-0 top-0 w-full h-full bg-gray-50 ease-in-out duration-500 z-20"
-              : "ease-in-out duration-500 fixed w-full h-full top-[-100%] invisible"
+              ? "fixed left-0 top-0 w-full h-full bg-gray-50 ease-in-out transition duration-500 z-20"
+              : "ease-in-out duration-500 fixed w-full h-full left-[-100%] hidden"
           }`}
         >
           <ul
