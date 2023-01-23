@@ -5,7 +5,21 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        scrollnav: "scrollnav .25s ease-in",
+      },
+      keyframes: {
+        scrollnav: {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translate(0)",
+          },
+        },
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
