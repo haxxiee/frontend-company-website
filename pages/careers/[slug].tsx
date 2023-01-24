@@ -88,7 +88,7 @@ export default function Page({ data, content }: any) {
 }
 
 export async function getStaticPaths() {
-  const response = await axios.get("http://0.0.0.0:1337/api/jobs");
+  const response = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/jobs`);
   const data = response.data.data;
   const paths = data.map((jobs: any) => {
     return {
@@ -108,7 +108,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
   const slug = context.params.slug;
   const response = await axios.get(
-    `http://0.0.0.0:1337/api/jobs?filters[slug][$eq]=${slug}&populate=*`
+    `${process.env.NEXT_PUBLIC_URL}/api/jobs?filters[slug][$eq]=${slug}&populate=*`
   );
 
   const data = response.data.data[0].attributes;

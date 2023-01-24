@@ -63,7 +63,7 @@ export default function Home({ data }: any) {
 
 export async function getStaticProps(context: any) {
   const response = await axios.get(
-    `http://0.0.0.0:1337/api/case-studies?populate=*`
+    `${process.env.NEXT_PUBLIC_URL}/api/case-studies?populate=*`
   );
 
   const rawData = response.data.data;

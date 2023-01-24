@@ -20,7 +20,9 @@ export default function Page({ data }: any) {
 }
 
 export async function getStaticProps(context: any) {
-  const response = await axios.get(`http://0.0.0.0:1337/api/posts?populate=*`);
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_URL}/api/posts?populate=*`
+  );
 
   const rawData = response.data.data;
   const data = rawData.map((obj: any) => {
