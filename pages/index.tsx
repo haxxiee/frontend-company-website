@@ -1,6 +1,7 @@
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import FrontpageCard from "../components/frontpageCard";
 
@@ -15,14 +16,41 @@ export default function Home({ data }: any) {
       </Head>
       <section className="max-w-[76rem] mx-auto px-4">
         <div className="flex flex-col justify-center max-w-4xl py-64 mx-auto">
-          <h1 className="font-bold text-5xl md:text-7xl">
+          <motion.h1
+            className="font-bold text-5xl md:text-7xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 0.2,
+              ease: "easeInOut",
+            }}
+          >
             Build. Launch. Grow.
-          </h1>
-          <p className="text-xl md:text-2xl font-medium py-2 text-gray-500 max-w-xl">
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl font-medium py-2 text-gray-500 max-w-xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 0.3,
+              ease: "easeInOut",
+            }}
+          >
             WebApp crafts award-winning mobile and web experiences driven by
             strategy, design and technology.
-          </p>
-          <div className="font-semibold text-lg md:text-2xl mt-5 flex items-center">
+          </motion.p>
+          <motion.div
+            className="font-semibold text-lg md:text-2xl mt-5 flex items-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 0.4,
+              ease: "easeInOut",
+            }}
+          >
             <Link href={"/case-studies"}>
               <div className="flex items-center group">
                 <h3>See Our Work</h3>
@@ -41,7 +69,7 @@ export default function Home({ data }: any) {
                 </svg>
               </div>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
       {data.map((item: any) => {

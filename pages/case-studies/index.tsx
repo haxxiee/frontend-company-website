@@ -1,4 +1,5 @@
 import axios from "axios";
+import { motion } from "framer-motion";
 import CasestudyCard from "../../components/casestudyCard";
 import ContactForm from "../../components/ContactForm";
 
@@ -7,15 +8,33 @@ export default function Page({ data }: any) {
     <>
       <div className="flex flex-col justify-center items-center mx-auto">
         <div className="py-28 px-5 mx-auto max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl font-bold my-4">
+          <motion.h1
+            className="text-4xl sm:text-5xl font-bold my-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 0.2,
+              ease: "easeInOut",
+            }}
+          >
             Launching products that scale
-          </h1>
-          <p className="text-xl sm:text-2xl text-gray-500 font-normal">
+          </motion.h1>
+          <motion.p
+            className="text-xl sm:text-2xl text-gray-500 font-normal"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 0.3,
+              ease: "easeInOut",
+            }}
+          >
             WebApp partners with clients to design and develop custom mobile
             apps, websites, platforms and experiences. We work with an array of
             clients, from global brands and media properties to innovative
             startups and funded ventures.
-          </p>
+          </motion.p>
         </div>
         <div className="flex flex-row flex-wrap items-center justify-center gap-10 w-full">
           {data.map((item: any) => {

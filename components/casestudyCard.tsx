@@ -5,7 +5,7 @@ import { FC } from "react";
 const CasestudyCard: FC<any> = ({ item }) => {
   return (
     <div
-      className="group flex flex-col justify-center w-[350px] sm:w-auto sm:max-w-2xl text-white rounded-md"
+      className="group flex flex-col justify-center w-[350px] sm:w-auto sm:max-w-2xl text-white rounded-md hover:scale-[99%] duration-500"
       style={{ backgroundColor: `${item.colorHex}` }}
     >
       <Link

@@ -1,20 +1,50 @@
 import axios from "axios";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import CareerCard from "../../components/careerCard";
 
 export default function Page({ data }: any) {
   return (
     <div className="flex flex-col items-center mx-auto">
       <div className="max-w-3xl my-32 px-5">
-        <h1 className="font-bold text-4xl sm:text-5xl">Work with U.</h1>
-        <p className="text-xl sm:text-2xl my-5 text-gray-500">
+        <motion.h1
+          className="font-bold text-4xl sm:text-5xl"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.2,
+            ease: "easeInOut",
+          }}
+        >
+          Work with U.
+        </motion.h1>
+        <motion.p
+          className="text-xl sm:text-2xl my-5 text-gray-500"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.3,
+            ease: "easeInOut",
+          }}
+        >
           We&apos;re always looking for new additions to our team who share our
           core values, and want to make cool stuff for some sweet clients and
           partners.
-        </p>
-        <button className="p-4 sm:p-5 bg-black text-white rounded-lg font-semibold my-4">
+        </motion.p>
+        <motion.button
+          className="p-4 sm:p-5 bg-black text-white rounded-lg font-semibold my-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.4,
+            ease: "easeInOut",
+          }}
+        >
           View Job Position
-        </button>
+        </motion.button>
       </div>
       <div className="max-w-full">
         <h2 className="px-5 md:pl-20 text-3xl sm:text-5xl mt-10 mb-32">

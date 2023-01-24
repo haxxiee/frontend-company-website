@@ -11,14 +11,14 @@ const NewsCard: FC<any> = ({ item }) => {
           query: { slug: item.slug },
         }}
       >
-        <div className="max-w-xl shadow-md">
-          <div className="">
+        <div className="max-w-xl shadow-md ">
+          <div className="overflow-hidden">
             <Image
               src={item.image.data.attributes.url}
               alt="Image of news picture"
               width={500}
               height={500}
-              className="h-80 object-cover"
+              className="h-80 object-cover hover:scale-[105%] duration-300"
               priority
             />
           </div>

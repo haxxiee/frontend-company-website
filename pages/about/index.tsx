@@ -1,14 +1,24 @@
 import Image from "next/image";
+import { easeOut, motion } from "framer-motion";
 import ContactForm from "../../components/ContactForm";
 
 export default function Page({ post }: any) {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <h1 className="font-bold text-4xl my-32 max-w-5xl px-5">
+        <motion.h1
+          className="font-bold text-4xl my-32 max-w-5xl px-5"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: "easeInOut",
+          }}
+        >
           We are a full service agency & mobile app development team with over
           100 successful mobile and web applications on our list
-        </h1>
+        </motion.h1>
 
         {/* First one */}
         <section className="flex flex-col-reverse md:flex-row max-w-2xl md:max-w-7xl px-5 my-20">

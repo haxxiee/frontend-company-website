@@ -1,14 +1,35 @@
 import axios from "axios";
+import { motion } from "framer-motion";
 import NewsCard from "../../components/newsCard";
 
 export default function Page({ data }: any) {
   return (
     <div className="flex flex-col justify-center items-center max-w-8xl mx- px-4">
       <div className="my-32">
-        <h1 className="text-5xl font-bold my-4">Latest news and happenings</h1>
-        <p className="text-2xl text-gray-500 font-normal">
+        <motion.h1
+          className="text-5xl font-bold my-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.2,
+            ease: "easeInOut",
+          }}
+        >
+          Latest news and happenings
+        </motion.h1>
+        <motion.p
+          className="text-2xl text-gray-500 font-normal"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.3,
+            ease: "easeInOut",
+          }}
+        >
           Have a look at what&apos;s been happening at WebApp lately!
-        </p>
+        </motion.p>
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center gap-10 w-full">
         {data.map((item: any) => {

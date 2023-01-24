@@ -50,7 +50,7 @@ const Header: FC = () => {
               </Link>
               <Link href={"/contact"}>
                 <button
-                  className={`bg-black px-8 py-4 rounded-md text-base font-semibold text-white ${
+                  className={`bg-black px-8 py-4 rounded-md text-base font-semibold text-white hover:scale-[105%] duration-300 ${
                     nav ? "px-6 py-3" : ""
                   }`}
                 >
