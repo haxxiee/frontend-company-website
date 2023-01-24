@@ -15,8 +15,8 @@ const FrontpageCard: FC<any> = ({ item }) => {
             query: { slug: item.slug },
           }}
         >
-          <div className="flex flex-col-reverse items-center md:flex-row">
-            <div className="mx-auto">
+          <div className="flex flex-col-reverse items-center md:pt-20 lg:p-0 md:flex-row">
+            <div className="mx-auto p-4">
               <h2 className="text-5xl font-bold">{item.companyName}</h2>
               <p className="text-lg my-3">{item.companyDescription}</p>
               <div className="w-16 h-[1px] my-7 bg-white"></div>
@@ -43,11 +43,11 @@ const FrontpageCard: FC<any> = ({ item }) => {
                 </svg>
               </div>
             </div>
-            <div className="mx-auto w-96 lg:w-[600px] md:w-auto">
+            <div className="mx-auto w-[350px] lg:w-[600px] md:w-[400px]">
               <Image
                 src={item.mainImage.data.attributes.url}
                 alt="Image of company product"
-                width={500}
+                width={600}
                 height={500}
                 className="w-auto h-auto"
                 priority

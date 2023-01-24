@@ -5,19 +5,19 @@ import CareerCard from "../../components/careerCard";
 export default function Page({ data }: any) {
   return (
     <div className="flex flex-col items-center mx-auto">
-      <div className="max-w-3xl my-32">
-        <h1 className="font-bold text-5xl">Work with U.</h1>
-        <p className="text-2xl my-5 text-gray-500">
+      <div className="max-w-3xl my-32 px-5">
+        <h1 className="font-bold text-4xl sm:text-5xl">Work with U.</h1>
+        <p className="text-xl sm:text-2xl my-5 text-gray-500">
           We&apos;re always looking for new additions to our team who share our
           core values, and want to make cool stuff for some sweet clients and
           partners.
         </p>
-        <button className="p-5 bg-black text-white rounded-lg font-semibold my-4">
+        <button className="p-4 sm:p-5 bg-black text-white rounded-lg font-semibold my-4">
           View Job Position
         </button>
       </div>
       <div className="max-w-full">
-        <h2 className="pl-20 text-5xl mt-10 mb-32">
+        <h2 className="px-5 md:pl-20 text-3xl sm:text-5xl mt-10 mb-32">
           But first, a little bit about us.
         </h2>
         <div className="relative">
@@ -29,8 +29,8 @@ export default function Page({ data }: any) {
             priority
             className={"w-full rounded-sm"}
           />
-          <div className="bg-gray-50 w-1/2 h-[600px] absolute bottom-0 right-0 rounded-br-sm rounded-tl-lg bg-opacity-95">
-            <div className="p-10">
+          <div className="bg-gray-50 w-full lg:w-1/2 h-[600px] mt-20 lg:mt-0 lg:absolute bottom-0 right-0 rounded-br-sm rounded-tl-lg bg-opacity-95">
+            <div className="px-5 lg:p-10">
               <h2 className="text-4xl font-bold mb-8">
                 Not your ordinary tech company.
               </h2>
@@ -65,11 +65,11 @@ export default function Page({ data }: any) {
           </div>
         </div>
       </div>
-      <section className="max-w-5xl my-48">
+      <section className="max-w-5xl my-48 px-4">
         <h2 className="font-semibold text-4xl mb-4 px-4">
           Now it&apos;s your turn.
         </h2>
-        <p className="text-2xl px-4">
+        <p className="text-xl sm:text-2xl px-4">
           We love making new friends. See a position you can fill? Tell us about
           yourself, we’ll take it from there if we have an opening.
         </p>

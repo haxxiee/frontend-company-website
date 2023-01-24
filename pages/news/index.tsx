@@ -3,7 +3,7 @@ import NewsCard from "../../components/newsCard";
 
 export default function Page({ data }: any) {
   return (
-    <div className="flex flex-col justify-center items-center max-w-8xl mx-auto">
+    <div className="flex flex-col justify-center items-center max-w-8xl mx- px-4">
       <div className="my-32">
         <h1 className="text-5xl font-bold my-4">Latest news and happenings</h1>
         <p className="text-2xl text-gray-500 font-normal">

@@ -18,7 +18,7 @@ const NewsCard: FC<any> = ({ item }) => {
               alt="Image of news picture"
               width={500}
               height={500}
-              className="max-w-xl h-80 object-cover"
+              className="h-80 object-cover"
               priority
             />
           </div>

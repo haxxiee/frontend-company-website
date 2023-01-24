@@ -5,7 +5,7 @@ import { FC } from "react";
 const CasestudyCard: FC<any> = ({ item }) => {
   return (
     <div
-      className="group flex flex-col justify-center max-w-2xl text-white rounded-md"
+      className="group flex flex-col justify-center w-[350px] sm:w-auto sm:max-w-2xl text-white rounded-md"
       style={{ backgroundColor: `${item.colorHex}` }}
     >
       <Link
@@ -15,7 +15,7 @@ const CasestudyCard: FC<any> = ({ item }) => {
         }}
       >
         <div>
-          <div className="p-4 w-[500px]">
+          <div className="p-4 w-[350px] sm:w-[500px]">
             <Image
               src={item.mainImage.data.attributes.url}
               alt="Image of company product"

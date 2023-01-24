@@ -13,14 +13,16 @@ export default function Home({ data }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="max-w-[76rem] mx-auto">
+      <section className="max-w-[76rem] mx-auto px-4">
         <div className="flex flex-col justify-center max-w-4xl py-64 mx-auto">
-          <h1 className="font-bold text-7xl">Build. Launch. Grow.</h1>
-          <p className=" text-2xl font-medium py-2 text-gray-500 w-[620px]">
+          <h1 className="font-bold text-5xl md:text-7xl">
+            Build. Launch. Grow.
+          </h1>
+          <p className="text-xl md:text-2xl font-medium py-2 text-gray-500 max-w-xl">
             WebApp crafts award-winning mobile and web experiences driven by
             strategy, design and technology.
           </p>
-          <div className="font-semibold text-2xl mt-10 flex items-center">
+          <div className="font-semibold text-lg md:text-2xl mt-5 flex items-center">
             <Link href={"/case-studies"}>
               <div className="flex items-center group">
                 <h3>See Our Work</h3>
@@ -48,7 +50,7 @@ export default function Home({ data }: any) {
 
       <div className="flex flex-col justify-center items-center max-w-lg text-center mt-40 mb-10 mx-auto">
         <h3 className="font-bold text-4xl mb-3">Let&apos;s Talk</h3>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-600 px-4">
           We&apos;ve worked with clients of all sizes, from enterprise brands to
           funded startups. Let&apos;s talk about your project and how we can
           help provide value.

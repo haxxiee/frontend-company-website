@@ -5,20 +5,22 @@ import { MDXRemote } from "next-mdx-remote";
 export default function Page({ data, content }: any) {
   return (
     <div className="flex flex-col justify-center items-center mx-auto">
-      <div className="px-2 max-w-3xl py-32">
+      <div className="px-4 max-w-3xl py-32">
         <p className="font-extrabold text-gray-400 text-xl">{data.location}</p>
-        <h1 className="font-bold text-5xl py-2">{data.position}</h1>
-        <p className="text-2xl text-gray-500 text-semi">{data.summary}</p>
-        <button className="py-4 px-6 bg-black text-white font-semibold text-lg rounded-md my-7">
+        <h1 className="font-bold text-4xl sm:text-5xl py-2">{data.position}</h1>
+        <p className="text-xl sm:text-2xl text-gray-500 text-semi">
+          {data.summary}
+        </p>
+        <button className="py-3 px-5 sm:py-4 sm:px-6 bg-black text-white font-semibold text-lg rounded-md my-7">
           Apply Now
         </button>
       </div>
-      <div className="bg-white p-32 shadow">
+      <div className="bg-white px-4 py-16 md:p-32 shadow">
         <div className="prose text-xl max-w-3xl px-2">
           <MDXRemote {...content} />
         </div>
       </div>
-      <div className="max-w-lg my-32">
+      <div className="max-w-lg my-32 px-4">
         <div className="flex flex-col justify-center items-center text-center px-5">
           <h2 className="font-bold text-4xl">Apply for this position</h2>
           <p className="text-xl">

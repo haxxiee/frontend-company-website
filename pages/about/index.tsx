@@ -11,8 +11,8 @@ export default function Page({ post }: any) {
         </h1>
 
         {/* First one */}
-        <section className="flex max-w-7xl px-5 my-20">
-          <div className="py-20 pr-10 max-w-md">
+        <section className="flex flex-col-reverse md:flex-row max-w-2xl md:max-w-7xl px-5 my-20">
+          <div className="mt-6 md:mt-0 lg:py-20 pr-3 lg:pr-10 max-w-sm lg:max-w-md">
             <h2 className="font-semibold text-3xl">
               Et vitae sequi in sint itaque
             </h2>
@@ -36,8 +36,8 @@ export default function Page({ post }: any) {
         </section>
 
         {/* Second one */}
-        <section className="flex flex-row-reverse max-w-7xl px-5 my-20">
-          <div className="py-20 pl-10 max-w-md">
+        <section className="flex flex-col-reverse md:flex-row-reverse max-w-2xl md:max-w-7xl px-5 my-20">
+          <div className="mt-6 md:mt-0 lg:py-20 pl-3 lg:pl-10 max-w-sm lg:max-w-md">
             <h2 className="font-semibold text-3xl">
               Et vitae sequi in sint itaque
             </h2>
@@ -61,7 +61,7 @@ export default function Page({ post }: any) {
         </section>
       </div>
       {/* Section two */}
-      <section className="bg-black text-white py-16 my-10">
+      <section className="bg-black text-white py-16 my-10 px-5">
         <div className="flex flex-col items-center justify-center max-w-2xl mx-auto">
           <div className="max-w-xl">
             <h1 className="text-4xl">OUR MANIFESTO</h1>
@@ -124,7 +124,7 @@ export default function Page({ post }: any) {
       </section>
 
       <div className="flex justify-center items-center">
-        <div className="flex flex-col justify-center items-center max-w-lg text-center mt-40 mb-20">
+        <div className="flex flex-col justify-center items-center max-w-lg text-center px-5 mt-40 mb-20">
           <h3 className="font-bold text-4xl mb-3">Let&apos;s Talk</h3>
           <p className="text-xl text-gray-600">
             We&apos;ve worked with clients of all sizes, from enterprise brands

@@ -3,17 +3,19 @@ import Image from "next/image";
 
 export default function Page({ data }: any) {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center overflow-hidden">
       <div className="w-full relative">
         {/* Circle below */}
         <div
-          className="absolute inset-x-0 m-auto -z-10 w-[700px] h-[700px] inset-y-0 rounded-full"
+          className="absolute inset-x-0 m-auto -z-10 w-full h-[400px] md:w-[700px] md:h-[700px] inset-y-0 md:rounded-full"
           style={{ backgroundColor: `${data.colorHex}30` }}
         />
-        <div className="flex justify-center items-center h-[90vh]">
+        <div className="flex justify-center items-center px-4 h-[90vh]">
           <div className="my-40 max-w-lg">
             <h1 className="font-bold text-2xl">{data.companyName}</h1>
-            <p className="text-5xl mt-4">{data.companyDescription}</p>
+            <p className=" text-4xl md:text-5xl mt-4">
+              {data.companyDescription}
+            </p>
             <div className="flex items-center justify-center gap-2 mt-16">
               <p className="font-semibold text-xl">See More</p>
               <svg
@@ -40,8 +42,8 @@ export default function Page({ data }: any) {
         </div>
       </div>
 
-      <div className="flex max-w-5xl px-20 mt-32">
-        <div className="mr-48">
+      <div className="flex flex-col sm:flex-row max-w-5xl px-5 md:px-20 mt-32">
+        <div className="sm:mr-10 md:mr-48">
           <h2 className="font-semibold text-3xl">
             THE
             <br />
@@ -51,8 +53,8 @@ export default function Page({ data }: any) {
         </div>
         <p className="text-xl text-gray-600">{data.challenge}</p>
       </div>
-      <div className="flex items-center max-w-5xl mt-48 px-20">
-        <div className="w-[500px] pr-10">
+      <div className="flex items-center flex-col-reverse sm:flex-row max-w-5xl mt-48 sm:px-20">
+        <div className="w-auto px-5 my-6 sm:my-0 sm:w-[500px] sm:pr-10">
           <h2 className="font-semibold text-3xl">
             THE
             <br />
@@ -61,7 +63,7 @@ export default function Page({ data }: any) {
           <div className="w-16 h-[1px] my-7 bg-black" />
           <p className="text-xl text-gray-600">{data.solution}</p>
         </div>
-        <div className="-mr-20">
+        <div className="w-[350px] sm:w-auto sm:-mr-20">
           <Image
             src={data.imageOne.data.attributes.url}
             alt={"Image of case study product"}
@@ -71,7 +73,7 @@ export default function Page({ data }: any) {
         </div>
       </div>
 
-      <div className="my-40 max-w-7xl px-10">
+      <div className="my-40 w-[800px] sm:w-auto sm:max-w-7xl sm:px-10">
         <Image
           src={data.imageTwo.data.attributes.url}
           alt={"Image of case study product"}
