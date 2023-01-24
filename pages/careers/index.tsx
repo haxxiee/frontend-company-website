@@ -2,8 +2,15 @@ import axios from "axios";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CareerCard from "../../components/careerCard";
+import { useRef } from "react";
 
 export default function Page({ data }: any) {
+  const jobsRef = useRef<any>(null);
+
+  const handleRefClick = () => {
+    jobsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col items-center mx-auto">
       <div className="max-w-3xl my-32 px-5">
@@ -42,6 +49,7 @@ export default function Page({ data }: any) {
             delay: 0.4,
             ease: "easeInOut",
           }}
+          onClick={handleRefClick}
         >
           View Job Position
         </motion.button>
@@ -95,7 +103,7 @@ export default function Page({ data }: any) {
           </div>
         </div>
       </div>
-      <section className="max-w-5xl my-48 px-4">
+      <section className="max-w-5xl my-48 px-4" ref={jobsRef}>
         <h2 className="font-semibold text-4xl mb-4 px-4">
           Now it&apos;s your turn.
         </h2>

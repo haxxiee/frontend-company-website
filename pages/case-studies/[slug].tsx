@@ -1,7 +1,14 @@
 import axios from "axios";
 import Image from "next/image";
+import { useRef } from "react";
 
 export default function Page({ data }: any) {
+  const moreRef = useRef<any>(null);
+
+  const handleRefClick = () => {
+    moreRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col items-center justify-center overflow-hidden">
       <div className="w-full relative">
@@ -16,7 +23,10 @@ export default function Page({ data }: any) {
             <p className=" text-4xl md:text-5xl mt-4">
               {data.companyDescription}
             </p>
-            <div className="flex items-center justify-center gap-2 mt-16">
+            <div
+              className="flex items-center justify-center gap-2 mt-16"
+              onClick={handleRefClick}
+            >
               <p className="font-semibold text-xl">See More</p>
               <svg
                 width="24"
@@ -42,7 +52,10 @@ export default function Page({ data }: any) {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row max-w-5xl px-5 md:px-20 mt-32">
+      <div
+        className="flex flex-col sm:flex-row max-w-5xl px-5 md:px-20 mt-32"
+        ref={moreRef}
+      >
         <div className="sm:mr-10 md:mr-48">
           <h2 className="font-semibold text-3xl">
             THE

@@ -1,8 +1,15 @@
 import axios from "axios";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import { useRef } from "react";
 
 export default function Page({ data, content }: any) {
+  const applyRef = useRef<any>(null);
+
+  const handleRefClick = () => {
+    applyRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col justify-center items-center mx-auto">
       <div className="px-4 max-w-3xl py-32">
@@ -11,7 +18,10 @@ export default function Page({ data, content }: any) {
         <p className="text-xl sm:text-2xl text-gray-500 text-semi">
           {data.summary}
         </p>
-        <button className="py-3 px-5 sm:py-4 sm:px-6 bg-black text-white font-semibold text-lg rounded-md my-7">
+        <button
+          className="py-3 px-5 sm:py-4 sm:px-6 bg-black text-white font-semibold text-lg rounded-md my-7"
+          onClick={handleRefClick}
+        >
           Apply Now
         </button>
       </div>
@@ -21,7 +31,10 @@ export default function Page({ data, content }: any) {
         </div>
       </div>
       <div className="max-w-lg my-32 px-4">
-        <div className="flex flex-col justify-center items-center text-center px-5">
+        <div
+          className="flex flex-col justify-center items-center text-center px-5"
+          ref={applyRef}
+        >
           <h2 className="font-bold text-4xl">Apply for this position</h2>
           <p className="text-xl">
             If you&apos;re on a mission to create impact, we&apos;d love to talk
@@ -97,7 +110,6 @@ export async function getStaticPaths() {
       },
     };
   });
-  console.log(paths);
 
   return {
     paths,
