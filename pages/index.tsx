@@ -54,7 +54,7 @@ export default function Home({ data }: any) {
           >
             <Link href={"/case-studies"}>
               <div className="flex items-center group">
-                <h3>See Our Work</h3>
+                <p>See Our Work</p>
                 <svg
                   width="24"
                   height="24"

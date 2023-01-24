@@ -37,18 +37,20 @@ const Header: FC = () => {
 
           <div className="hidden md:flex">
             <ul className="flex items-center gap-6 text-xl font-medium text-gray-600">
-              <Link href={"/case-studies"} onClick={closeNav}>
-                <li>Case Studies</li>
-              </Link>
-              <Link href={"/about"}>
-                <li>About</li>
-              </Link>
-              <Link href={"/news"}>
-                <li>News</li>
-              </Link>
-              <Link href={"/careers"}>
-                <li>Career</li>
-              </Link>
+              <li>
+                <Link href={"/case-studies"} onClick={closeNav}>
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href={"/about"}>About</Link>
+              </li>
+              <li>
+                <Link href={"/news"}>News</Link>
+              </li>
+              <li>
+                <Link href={"/careers"}>Career</Link>
+              </li>
               <Link href={"/contact"}>
                 <button
                   className={`bg-black px-8 py-4 rounded-md text-base font-semibold text-white transition hover:scale-[105%] duration-300 ${
