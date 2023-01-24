@@ -34,6 +34,7 @@ const Header: FC = () => {
           <Link href={"/"}>
             <div className="font-bold text-4xl">WebApp.</div>
           </Link>
+
           <div className="hidden md:flex">
             <ul className="flex items-center gap-6 text-xl font-medium text-gray-600">
               <Link href={"/case-studies"} onClick={closeNav}>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 import FrontpageCard from "../components/frontpageCard";
+import Image from "next/image";
 
 export default function Home({ data }: any) {
   return (
@@ -22,7 +23,7 @@ export default function Home({ data }: any) {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.4,
-              delay: 0.2,
+              delay: 0.1,
               ease: "easeInOut",
             }}
           >
@@ -34,7 +35,7 @@ export default function Home({ data }: any) {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.4,
-              delay: 0.3,
+              delay: 0.2,
               ease: "easeInOut",
             }}
           >
@@ -47,7 +48,7 @@ export default function Home({ data }: any) {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.4,
-              delay: 0.4,
+              delay: 0.3,
               ease: "easeInOut",
             }}
           >
@@ -75,6 +76,64 @@ export default function Home({ data }: any) {
       {data.map((item: any) => {
         return <FrontpageCard key={item.slug} item={item} />;
       })}
+
+      <div className="flex items-center justify-center mt-32 mb-20">
+        <div className="max-w-6xl bg-white px-4 py-20 sm:p-20 mx-4 rounded-md shadow-md">
+          <h2 className="text-4xl">A proven track record</h2>
+          <p className="text-xl sm:text-2xl text-gray-500 mt-3 mb-6">
+            Non vero libero qui quam porro aut soluta illo et quisquam
+            architecto qui accusamus tempora sit consectetur fugit ut fugiat
+            enim. Id consequatur velit sit doloribus alias quo facere impedit.
+            Ex similique enim in placeat doloremque vel internos dicta qui Quis
+            ratione ut iusto maxime non assumenda velit 33 quos praesentium? Vel
+            optio optio ut repudiandae.
+          </p>
+          <div className="flex flex-wrap sm:flex-nowrap justify-between items-center gap-4">
+            <div className="max-w-[140px]">
+              <Image
+                src={"/award1.png"}
+                alt={"test"}
+                height={200}
+                width={200}
+              />
+            </div>
+
+            <div className="max-w-[140px]">
+              <Image
+                src={"/award2.png"}
+                alt={"test"}
+                height={200}
+                width={200}
+              />
+            </div>
+            <div className="max-w-[140px]">
+              <Image
+                src={"/award3.svg"}
+                alt={"test"}
+                height={200}
+                width={200}
+                className="object-fill"
+              />
+            </div>
+            <div className="max-w-[140px]">
+              <Image
+                src={"/award4.png"}
+                alt={"test"}
+                height={200}
+                width={200}
+              />
+            </div>
+            <div className="max-w-[140px]">
+              <Image
+                src={"/award5.png"}
+                alt={"test"}
+                height={200}
+                width={200}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="flex flex-col justify-center items-center max-w-lg text-center mt-40 mb-10 mx-auto">
         <h3 className="font-bold text-4xl mb-3">Let&apos;s Talk</h3>

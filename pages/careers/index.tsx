@@ -20,7 +20,7 @@ export default function Page({ data }: any) {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.4,
-            delay: 0.2,
+            delay: 0.1,
             ease: "easeInOut",
           }}
         >
@@ -32,7 +32,7 @@ export default function Page({ data }: any) {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.4,
-            delay: 0.3,
+            delay: 0.2,
             ease: "easeInOut",
           }}
         >
@@ -46,7 +46,7 @@ export default function Page({ data }: any) {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.4,
-            delay: 0.4,
+            delay: 0.3,
             ease: "easeInOut",
           }}
           onClick={handleRefClick}

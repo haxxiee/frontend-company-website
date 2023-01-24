@@ -1,6 +1,7 @@
 import axios from "axios";
 import Image from "next/image";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Page({ data }: any) {
   const moreRef = useRef<any>(null);
@@ -52,9 +53,15 @@ export default function Page({ data }: any) {
         </div>
       </div>
 
-      <div
+      <motion.div
         className="flex flex-col sm:flex-row max-w-5xl px-5 md:px-20 mt-32"
         ref={moreRef}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+        }}
       >
         <div className="sm:mr-10 md:mr-48">
           <h2 className="font-semibold text-3xl">
@@ -65,8 +72,16 @@ export default function Page({ data }: any) {
           <div className="w-16 h-[1px] my-7 bg-black" />
         </div>
         <p className="text-xl text-gray-600">{data.challenge}</p>
-      </div>
-      <div className="flex items-center flex-col-reverse sm:flex-row max-w-5xl mt-48 sm:px-20">
+      </motion.div>
+      <motion.div
+        className="flex items-center flex-col-reverse sm:flex-row max-w-5xl mt-48 sm:px-20"
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.6,
+        }}
+      >
         <div className="w-auto px-5 my-6 sm:my-0 sm:w-[500px] sm:pr-10">
           <h2 className="font-semibold text-3xl">
             THE
@@ -84,9 +99,17 @@ export default function Page({ data }: any) {
             height={500}
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="my-40 w-[800px] sm:w-auto sm:max-w-7xl sm:px-10">
+      <motion.div
+        className="my-52 w-[800px] sm:w-auto sm:max-w-7xl sm:px-10"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.6,
+        }}
+      >
         <Image
           src={data.imageTwo.data.attributes.url}
           alt={"Image of case study product"}
@@ -94,7 +117,7 @@ export default function Page({ data }: any) {
           height={1000}
           className="w-auto h-auto"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
